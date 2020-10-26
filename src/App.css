@@ -1,38 +1,63 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(to bottom right, rosybrown, lightsalmon);
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.outputBox {
+  overflow-y: scroll;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  min-width: 200px;
+  height: 500px;
+  border-radius: 20px;
+  background-color: rgba(239, 239, 239, 0.6);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rightPersonInput {
+  grid-column: 3/3;
+  grid-row: 2/3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.leftPersonInput {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.person1Message, .person2Message {
+  margin-top:10px;
+  height: 20px;
+  min-width: 100px;
   color: white;
+  border-radius: 5px;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.person1Message {
+  background-color: brown;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.person2Message {
+  background-color: grey;
+}
+
+button {
+  background-color: grey;
+  border: none;
+  height:20px;
+}
+
+img {
+  height: 30px;
+  margin-top:10px;
 }
